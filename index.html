@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scooby Doo Labirynth</title>
+</head>
+<body>
+    <img src="scoobylabirintus/utkartyak/start0011.png" alt="" hidden>
+    <img src="scoobylabirintus/utkartyak/start0110.png" alt="" hidden>
+    <img src="scoobylabirintus/utkartyak/start1001.png" alt="" hidden>
+    <img src="scoobylabirintus/utkartyak/start1100.png" alt="" hidden>
+    <img src="scoobylabirintus/utkartyak/0011.png" hidden>
+    <img src="scoobylabirintus/utkartyak/0101.png" hidden>
+    <img src="scoobylabirintus/utkartyak/0110.png" hidden>
+    <img src="scoobylabirintus/utkartyak/0111.png" hidden>
+    <img src="scoobylabirintus/utkartyak/1001.png" hidden>
+    <img src="scoobylabirintus/utkartyak/1010.png" hidden>
+    <img src="scoobylabirintus/utkartyak/1011.png" hidden>
+    <img src="scoobylabirintus/utkartyak/1100.png" hidden>
+    <img src="scoobylabirintus/utkartyak/1101.png" hidden>
+    <img src="scoobylabirintus/utkartyak/1110.png" hidden>
+    <img src="scoobylabirintus/players/player1.png" alt="" hidden>
+    <img src="scoobylabirintus/players/player2.png" alt="" hidden>
+    <img src="scoobylabirintus/players/player3.png" alt="" hidden>
+    <img src="scoobylabirintus/players/player4.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/witch.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/witchdoctor.png" alt="" hidden>    
+    <img src="scoobylabirintus/monsters/phantomracer.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/blackknight.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/catcreature.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/charlie.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/dracula.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/futuremonster.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/ghostclown.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/ghostofeliaskingston.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/headlesshorseman.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/mantis.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/phantomshadow.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/zombie.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/miner.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/mummy.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/nofacezombie.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/phantomvirus.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/pterodactylghost.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/ramblingghost.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/redbears.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/swampmonster.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/tarmonster.png" alt="" hidden>
+    <img src="scoobylabirintus/monsters/voltghost.png" alt="" hidden>
+
+
+    <div class="popup">
+        <div class="popup-content">
+            <span>Number of players</span>
+            <input type="number" min="1" max="4" value="1" id="numberOfPlayers">
+            <button id="startGameButton">Start</button>
+            <span id=winnerName></span>
+        </div>
+    </div>
+
+    <div class="wrapper" id="wrapperDiv">
+        <div class="topButtons">
+            <button class="buttonVerticalTop"  value="11"></button>
+            <button class="buttonVerticalTop"  value="13"></button>
+            <button class="buttonVerticalTop"  value="15"></button>
+        </div>
+        <div class="canvasElement">
+            <canvas id="canvas" width="700" height="700" tabindex="1"  ></canvas>        
+        </div>
+        <div class="rightButtons">
+            <button class="buttonHorizontalRight" value="21"></button>
+            <button class="buttonHorizontalRight" value="23"></button>
+            <button class="buttonHorizontalRight" value="25"></button>
+        </div>
+        <div class="leftButtons">
+            <button class="buttonHorizontalLeft" value="41"></button>
+            <button class="buttonHorizontalLeft" value="43"></button>
+            <button class="buttonHorizontalLeft" value="45"></button>
+        </div>
+
+        <div class="bottomButtons">
+            <button class="buttonVerticalBottom" value="31"></button>
+            <button class="buttonVerticalBottom" value="33"></button>
+            <button class="buttonVerticalBottom" value="35"></button>
+        </div>
+        <div width="100" height="100" class="extra">
+            <img width="100" height="100" src="scoobylabirintus/utkartyak/none.png" alt="" id="plusTileImg">
+        </div>
+        <div class="gameStats">
+            <table  id="gameStatsTable">
+               
+            </table>
+        </div>
+    </div>
+    
+    <div class="gameRules" >
+        <h2>Játékszabály</h2>
+                                        <p>Váljunk szét, és keressünk nyomokat! A Rejtély Rt. tagjaként a te feladatod csapdába ejteni a szörnyeket a szörnylabirintusban!                                       </p>
+                                        <p>Az oldal betöltésekor autómatikusan 2 fős játék indul el. Ha szeretnéd megváltoztatni, vagy a játék során új játékot kezteni, akkor a játékosszám kiválasztása után nyomd meg a start gombot.
+                                            </p>
+                                        <p>A játéktér jobb oldalán találhatóak a játékosok neve, figurája, megszerzett kártyák/ játék elején kiosztott kártyák száma és a felső lap a húzópakliból. Ha megszerzel egy kincset, akkor új lapot húzol utána.
+                                        </p>
+                                        <p>A játék célja, hogy elfogd az össze szörnyet, majd visszatérj a kiinduló helyzetedbe (a 4 sarok valamelyikébe).
+                                        </p>
+                                        Minden fordulóban az összes játékos vérgehajt két akciót: 
+Előszőr a külön álló lapkát kell becsúsztatni a játéktérre a játéktábla körülötti gombok segítségével választhatod ki, hogy melyik irányba szeretnéd ezt megtenni. Mielőtt a lapkát becsúsztatnád, val lehetőséged forgatni azt, ha rákattintasz magára a lapkára.
+Ezt követően a lépés következik: Ha szeretnél/tudsz, akkor folytathatod utadat a szörnylabirintusban. Ehhez a nyilakat tudod használni, és segítségedre vannak a narancssárga négyzetecskék is, amik megmutatják, hogy mely mezőkre léphetsz. A falakon nem tudsz átmenni, elvégre nem vagy te szellem.
+</p>
+                                        <p>A jobb oldali tábla mutatja a jelenlegi játékost is (a képe színes, míg a többieknek fakó) , aki végezheti a fordulóját.
+                                        </p>
+                                        <p>A játéknak akkor van vége, ha az egyik játékos csapdába ejtette az összes kiosztott szörnyetegét, és visszatért a kiindulóhelyére.
+
+                                        </p>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="script2.js"></script>
+    
+</body>
+</html>
